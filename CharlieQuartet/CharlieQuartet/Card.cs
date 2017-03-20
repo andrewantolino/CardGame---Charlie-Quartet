@@ -8,5 +8,7 @@ namespace CharlieQuartet
 {
     public class Card
     {
+        
+
     }
 }

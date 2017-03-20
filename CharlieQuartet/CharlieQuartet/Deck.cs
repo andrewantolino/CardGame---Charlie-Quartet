@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace CharlieQuartet
 {
-    class Deck
+    public class Deck
     {
+
+
     }
 }
