@@ -19,7 +19,7 @@ namespace CharlieQuartet
             {
                 for (int j = 0; j < 13; j++)
                 {
-                    cards.Add(new Card(mySuits[i], myRank[j]));
+                    _cards.Add(new Card(mySuits[i], myRank[j]));
                     
                 }
             }
