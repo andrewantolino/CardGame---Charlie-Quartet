@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace CharlieQuartet
 {
+   
+
+
     public enum Rank
     {
         Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Jack, Queen, king
+        
+          
+
+
     }
+
+    
 }

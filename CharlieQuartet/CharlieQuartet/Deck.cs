@@ -8,43 +8,68 @@ namespace CharlieQuartet
 {
     public class Deck
     {
-
         private List<Card> _cards;
 
-        public Deck(string pnumber, string psuit, int ppoint)
-        {
-            Suit[] mySuits = new Suit[] {Suit.Spades,Suit.Hearts,Suit.Clubs,Suit.Diamonds };
-            Rank[] myRank = new Rank[] { Rank.Ace, Rank.Two, Rank.Three, Rank.Four, Rank.Five, Rank.Six, Rank.Seven, Rank.Eight, Rank.Nine, Rank.Jack, Rank.Queen, Rank.king };
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 13; j++)
+        
+            public Deck()
                 {
-                    _cards.Add(new Card(mySuits[i], myRank[j]));
-                    
-                }
-            }
-            _cards = new List<Card>();
-            
-           
-            Console.WriteLine();
+                    Suit[] mySuits = new Suit[] { Suit.Spades, Suit.Hearts, Suit.Clubs, Suit.Diamonds };
+                    Rank[] myRank = new Rank[] { Rank.Ace, Rank.Two, Rank.Three, Rank.Four, Rank.Five, Rank.Six, Rank.Seven, Rank.Eight, Rank.Nine, Rank.Jack, Rank.Queen, Rank.king };
+                    for (int i = 0; i < 4; i++)
+                    {
+                        for (int j = 0; j < 12; j++)
+                        {
+                            _cards.Add(new Card(mySuits[i], myRank[j]));
+
+                        }
+                    }
+                    _cards = new List<Card>();
+
+
+                    Console.WriteLine();
         }
+
+        static Random r = new Random();
 
         public void Shuffle()
         {
-            Random rand = new Random();
-            int r = rand.Next(0, 52);
-
-            Card[] cards = new Card[] { };
-          
-            for (int i = 0; i < 52; i++)
+            for (int n = _cards.Count - 1; n > 0; --n)
             {
-                if (Equals(cards[i], _cards[r] ))
-                {
-
-                }
-               //ccards[i] = 
+                int k = r.Next(n + 1);
+                Card temp = _cards[n];
+                _cards[n] = _cards[k];
+                _cards[k] = temp;
             }
         }
 
+
+    
+        
+            
+        /*  public void Shuffle()
+          {
+               Random rand = new Random();
+               int r = rand.Next(0, 51);
+
+               Card[] cards = new Card[] { };
+
+
+               for (int i = 0; i < 52; i++)
+               {
+                   if (Equals(cards[i], _cards[r] ))
+                   {
+
+                     int temp = _cards[r] ;
+                       _cards[r] = card[i]
+                   }
+          //ccards[i] = 
+      }
+  }*/
+
+
+
     }
+
+    
+
 }
