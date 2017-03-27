@@ -21,17 +21,17 @@ namespace CharlieQuartet
                     myPoints.Add("Two", 2);
                     myPoints.Add("Three", 3);
                     myPoints.Add("Four", 4);
-                    myPoints.Add("Five", 5);
+                    myPoints.Add("Five", 5);                      
                     myPoints.Add("Six", 6);
                     myPoints.Add("Seven", 7);
                     myPoints.Add("Eight", 8);
                     myPoints.Add("Nine", 9);
                     myPoints.Add("Ten", 10);
-                    myPoints.Add("Jack", 10);
+                    myPoints.Add("Jack", 10);                                                        
                     myPoints.Add("Queen", 10);
                     myPoints.Add("King", 10);
 
-            _cards = new List<Card>;
+                    _cards = new List<Card>();
 
                     for (int i = 0; i < 4; i++)
                     {
@@ -40,6 +40,20 @@ namespace CharlieQuartet
                             _cards.Add(new Card(myRank[j], mySuits[i], myPoints[myRank[j]]));
                         }
                     }
+
+
+                    /*
+            abstract class player
+            {
+            abstract private Card cardToHand();
+            } 
+
+            if()
+            {
+
+            }
+            */
+
         }
 
         static Random r = new Random();
@@ -56,7 +70,10 @@ namespace CharlieQuartet
         }
 
 
-    
+        public void DealCard ()
+        {
+
+        }
         
             
         /*  public void Shuffle()
