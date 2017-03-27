@@ -16,5 +16,31 @@ namespace CharlieQuartet.Tests
         {
             Assert.Fail();
         }
+
+        [TestMethod()]
+        public void CardTest()
+        {
+            //Card vCard = new Card(string pnumber, Suit psuit, int ppoint);
+
+            Card vCard = new Card("King", "Hearts", 10);
+
+            Assert.IsInstanceOfType(vCard, typeof(Card));
+        }
+
+        [TestMethod()]
+        public void getNumberTest()
+        {
+            Card vCard = new Card("King", "Hearts", 10);
+
+            Assert.AreEqual(vCard.getNumber(), "King");
+
+        }
+
+        [TestMethod()]
+        public void getSuitTest()
+        {
+            Card vCard = new Card("King", "Hearts", 10);
+            Assert.AreEqual(vCard.getSuit(), "Hearts");
+        }
     }
 }

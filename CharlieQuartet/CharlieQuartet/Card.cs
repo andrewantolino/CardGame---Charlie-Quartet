@@ -9,14 +9,12 @@ namespace CharlieQuartet
     public class Card
     {
         private string number;
-        private Suit _suit;
-        private int point;
+        public Suit _suit;
+        public int point;
 
         public Card(String pnumber, Suit psuit, int ppoint )
         {
-            number = pnumber;
-            _suit = psuit;
-            point = ppoint;
+            _suit = suit;
         }
 
 
@@ -25,9 +23,9 @@ namespace CharlieQuartet
             return number;
         }
 
-        public Suit getSuit()
+        public void setNumber(string aNumber)
         {
-            return _suit;
+            number = aNumber;
         }
 
         public int getPoint()
