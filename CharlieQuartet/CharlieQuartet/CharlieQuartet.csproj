@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,6 +65,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Card.cs" />
+    <Compile Include="CardGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardGameForm.Designer.cs">
+      <DependentUpon>CardGameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rank.cs" />
     <Compile Include="Suit.cs" />
     <Compile Include="Deck.cs" />
