@@ -8,6 +8,6 @@ namespace CharlieQuartet
 {
     public enum Rank
     {
-        Ace =1, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack=10, Queen=10, king=10
+        Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, king
     }
 }

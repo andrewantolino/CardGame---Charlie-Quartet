@@ -13,20 +13,33 @@ namespace CharlieQuartet
         
             public Deck()
                 {
-                    Suit[] mySuits = new Suit[] { Suit.Spades, Suit.Hearts, Suit.Clubs, Suit.Diamonds };
-                    Rank[] myRank = new Rank[] { Rank.Ace, Rank.Two, Rank.Three, Rank.Four, Rank.Five, Rank.Six, Rank.Seven, Rank.Eight, Rank.Nine, Rank.Jack, Rank.Queen, Rank.king };
+                    String[] mySuits = new String[] { "Spades", "Hearts", "Clubs", "Diamonds" };
+                    String[] myRank = new String[] { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten" ,"Jack", "Queen", "King" };
+
+                    Dictionary<string, int> myPoints = new Dictionary<string, int>();
+                    myPoints.Add("Ace", 0);
+                    myPoints.Add("Two", 2);
+                    myPoints.Add("Three", 3);
+                    myPoints.Add("Four", 4);
+                    myPoints.Add("Five", 5);
+                    myPoints.Add("Six", 6);
+                    myPoints.Add("Seven", 7);
+                    myPoints.Add("Eight", 8);
+                    myPoints.Add("Nine", 9);
+                    myPoints.Add("Ten", 10);
+                    myPoints.Add("Jack", 10);
+                    myPoints.Add("Queen", 10);
+                    myPoints.Add("King", 10);
+
+            _cards = new List<Card>;
+
                     for (int i = 0; i < 4; i++)
                     {
-                        for (int j = 0; j < 12; j++)
+                        for (int j = 0; j < 13; j++)
                         {
-                            _cards.Add(new Card(mySuits[i], myRank[j]));
-
+                            _cards.Add(new Card(myRank[j], mySuits[i], myPoints[myRank[j]]));
                         }
                     }
-                    _cards = new List<Card>();
-
-
-                    Console.WriteLine();
         }
 
         static Random r = new Random();
