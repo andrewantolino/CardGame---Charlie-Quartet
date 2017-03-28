@@ -23,9 +23,6 @@ namespace CharlieQuartet
                 balance = 100;
             }
             
-            
-            
-            
         }
 
         public void placeBet(double pbet)
