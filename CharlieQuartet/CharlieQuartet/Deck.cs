@@ -70,9 +70,11 @@ namespace CharlieQuartet
         }
 
 
-        public void DealCard ()
+        public Card DealCard ()
         {
-
+            Card dealtCard = _cards[0];
+            _cards.RemoveAt(0);
+            return dealtCard;
         }
         
             
