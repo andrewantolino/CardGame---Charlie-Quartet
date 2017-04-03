@@ -16,6 +16,29 @@ namespace CharlieQuartet.Tests
         {
             Assert.Fail();
         }
-    
+
+        [TestMethod()]
+        public void placeBetTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void addCardToHandTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void calculateHandValueTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void makePaymentTest()
+        {
+            Assert.Fail();
+        }
     }
 }

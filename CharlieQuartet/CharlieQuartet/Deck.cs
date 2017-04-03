@@ -99,6 +99,13 @@ namespace CharlieQuartet
   }*/
 
 
+        // this method is to enable testing only - please comment out when delivering to production
+
+        public Card getCardByIndex(int pIndex)
+        {
+            return _cards[pIndex];
+        }
+
 
     }
 

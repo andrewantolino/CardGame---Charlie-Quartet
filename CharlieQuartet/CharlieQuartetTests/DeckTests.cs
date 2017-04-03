@@ -16,5 +16,57 @@ namespace CharlieQuartet.Tests
         {
             Assert.Fail();
         }
+
+        [TestMethod()]
+        public void ShuffleTest()
+        {
+            Deck shitdeck = new Deck();
+            Card firstcard = shitdeck.getCardByIndex(0);
+            Card tenthcard = shitdeck.getCardByIndex(9);
+            Card twentiethcard = shitdeck.getCardByIndex(19);
+           
+
+
+            shitdeck.Shuffle();
+
+           
+            Assert.AreNotSame(firstcard, shitdeck.getCardByIndex(0));
+
+            Assert.AreNotSame(tenthcard, shitdeck.getCardByIndex(9));
+
+            Assert.AreNotSame(twentiethcard, shitdeck.getCardByIndex(19));
+
+
+        }
+
+        [TestMethod()]
+        public void DealCardTest()
+        {
+            Deck shitdeck = new Deck();
+
+            Card firstCard = shitdeck.getCardByIndex(0);
+
+            Card tenthCard = shitdeck.getCardByIndex(9);
+
+            Card twentiethCard = shitdeck.getCardByIndex(19);
+
+            Card dealtCard = shitdeck.DealCard();
+
+            Assert.AreSame(firstCard, dealtCard);
+
+            Assert.AreSame(tenthCard, dealtCard);
+
+            Assert.AreSame(twentiethCard, dealtCard);
+
+            Assert.AreNotSame(firstCard, shitdeck.getCardByIndex(0));
+
+            Assert.AreNotSame(tenthCard, shitdeck.getCardByIndex(9));
+
+            Assert.AreNotSame(twentiethCard, shitdeck.getCardByIndex(19));
+
+            
+
+            
+        }
     }
 }
