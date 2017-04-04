@@ -1,0 +1,27 @@
+﻿<Window x:Name="AcePopUp1" x:Class="CharlieQuartet.AcePopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CharlieQuartet"
+        mc:Ignorable="d"
+        Title="AcePopUp" Height="126.025" Width="355.329">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,30,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="1079.519"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Label x:Name="label" Content="You received an Ace. What value do you want it to be?" HorizontalAlignment="Left" Margin="19,25,0,0" VerticalAlignment="Top" Height="26" Width="303"/>
+        <Button x:Name="ButtonOne" Content="One" HorizontalAlignment="Left" Margin="63,66,0,0" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Button x:Name="ButtonEleven" Content="Eleven" HorizontalAlignment="Left" Margin="181,66,0,0" VerticalAlignment="Top" Width="75" Height="22"/>
+    </Grid>
+</Window>
