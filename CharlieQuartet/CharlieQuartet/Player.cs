@@ -13,8 +13,9 @@ namespace CharlieQuartet
         double balance;
         double bet = 0;
 
-        public Player()
+        public Player(List<Card> hand, double balance, double bet)
         {
+
             //calculate the balance
             hand = new List<Card>();
             balance = 100;

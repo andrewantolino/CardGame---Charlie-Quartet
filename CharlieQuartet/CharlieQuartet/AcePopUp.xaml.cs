@@ -23,5 +23,6 @@ namespace CharlieQuartet
         {
             InitializeComponent();
         }
+
     }
 }
