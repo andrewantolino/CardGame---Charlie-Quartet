@@ -10,9 +10,10 @@ namespace CharlieQuartet
     {
         private List<Card> _cards;
 
-        
+            // constructor         
             public Deck()
                 {
+                    // setting up suits rank and points for cards
                     String[] mySuits = new String[] { "Spades", "Hearts", "Clubs", "Diamonds" };
                     String[] myRank = new String[] { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten" ,"Jack", "Queen", "King" };
 
@@ -30,9 +31,12 @@ namespace CharlieQuartet
                     myPoints.Add("Jack", 10);                                                        
                     myPoints.Add("Queen", 10);
                     myPoints.Add("King", 10);
-
+                    
+            
+                    // puting the data in card class
                     _cards = new List<Card>();
 
+                    //setting up the points
                     for (int i = 0; i < 4; i++)
                     {
                         for (int j = 0; j < 13; j++)
@@ -42,24 +46,14 @@ namespace CharlieQuartet
                     }
 
 
-                    /*
-            abstract class player
-            {
-            abstract private Card cardToHand();
-            } 
-
-            if()
-            {
-
-            }
-            */
-
         }
 
+        //arranging the random card which is saved in array 
         static Random r = new Random();
 
         public void Shuffle()
         {
+            //randomises the order of the card stored in the deck array of cards
             for (int n = _cards.Count - 1; n > 0; --n)
             {
                 int k = r.Next(n + 1);
@@ -69,7 +63,7 @@ namespace CharlieQuartet
             }
         }
 
-
+        // initial card deal card to player 
         public Card DealCard ()
         {
             Card dealtCard = _cards[0];
@@ -77,27 +71,6 @@ namespace CharlieQuartet
             return dealtCard;
         }
         
-            
-        /*  public void Shuffle()
-          {
-               Random rand = new Random();
-               int r = rand.Next(0, 51);
-
-               Card[] cards = new Card[] { };
-
-
-               for (int i = 0; i < 52; i++)
-               {
-                   if (Equals(cards[i], _cards[r] ))
-                   {
-
-                     int temp = _cards[r] ;
-                       _cards[r] = card[i]
-                   }
-          //ccards[i] = 
-      }
-  }*/
-
 
         // this method is to enable testing only - please comment out when delivering to production
 

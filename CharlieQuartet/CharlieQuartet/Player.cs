@@ -15,6 +15,7 @@ namespace CharlieQuartet
 
         public Player()
         {
+            //calculate the balance
             hand = new List<Card>();
             balance = 100;
             if (balance<= 5)
@@ -27,50 +28,63 @@ namespace CharlieQuartet
 
         public void placeBet(double pbet)
         {
+            //calculate the bet amount 
             balance = balance - pbet;
             bet = pbet;
 
+            //seting how much player can place bet  
             if (pbet > balance)
                 Console.WriteLine("bet to high, make a different be.");
         }
         //if bet == balance - 1 thn return error " not enough money"
         //else bet is placed
-
+        
         public void addCardToHand(Card pCard)
-        {
+        { 
+             // place card to hand 
             hand.Add(pCard);
+
+          
         }
        
-      
+     
 
         public int calculateHandValue()
         {
+
+
+              // if ace is 1 or 11
+           
+
+             // calculating all the points
             int points = 0; 
 
             for (int i = 0; i < hand.Count; i++)
             {
                 points += hand[i].getPoint();
-            }
+                 if(hand[i].getNumber() == "Ace" )
+                {
+                    Console.WriteLine("what do you want Ace to be");
+
+                    // popup saying if you want ace to be 1 or 11 
+
+                    // add either 1 or 11 to points
+
+
+                }
+                 else{
+                        points += hand[i].getPoint();
+
+                    }
             return points;
 
         }
 
+       
         public void makePayment(Card ppoint)
         {
-            /*
-
-            int[] Point = new int[] { 21, 22, 23, 24, 25, 26, 27, 28, 29 };
-            Dictionary<int, Double> mypoint = new Dictionary<int, Double>();
-            mypoint.Add(21, 1);
-            mypoint.Add(22, 1.25);
-            mypoint.Add(23, 1.5);
-            mypoint.Add(24, 1.75);
-            mypoint.Add(25, 2);
-            mypoint.Add(26, 1.75);
-            mypoint.Add(27, 1.5);
-            mypoint.Add(28, 1.25);
-            mypoint.Add(29, 1);
-            */
+         
+     
 
             // calculate point value of hand
             int total = calculateHandValue();
