@@ -27,7 +27,7 @@ namespace CharlieQuartet.Tests
         [TestMethod()]
         public void placeBetTest()
         {
-            Assert.Fail();
+            
         }
 
         [TestMethod()]

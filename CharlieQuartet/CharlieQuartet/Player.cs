@@ -50,7 +50,7 @@ namespace CharlieQuartet
 
 
 
-        /*public int calculateHandValue()
+        public int CalculateHandValue()
         {
 
 
@@ -71,26 +71,26 @@ namespace CharlieQuartet
 
                     // add either 1 or 11 to points
 
-
+                  
                 }
                 else
                 {
                     points += hand[i].getPoint();
 
                 }
-                return points;
-
+           
             }
-        }*/
+            return points;
+        }
 
        
-        /*public void makePayment(Card ppoint)
+        public void makePayment(Card ppoint)
         {
          
      
 
             // calculate point value of hand
-            int total = calculateHandValue();
+            int total = CalculateHandValue();
             // calculate payout amount based on points and bet
 
             double multiplyer;
@@ -134,6 +134,6 @@ namespace CharlieQuartet
             bet = 0; 
             // optional - reset game
 
-        }*/
+        }
     } 
 }

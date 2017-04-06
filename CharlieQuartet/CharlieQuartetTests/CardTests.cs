@@ -11,11 +11,6 @@ namespace CharlieQuartet.Tests
     [TestClass()]
     public class CardTests
     {
-        [TestMethod()]
-        public void testTest()
-        {
-            Assert.Fail();
-        }
 
         [TestMethod()]
         public void CardTest()
