@@ -71,8 +71,6 @@
     <Compile Include="CardGameForm.Designer.cs">
       <DependentUpon>CardGameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rank.cs" />
-    <Compile Include="Suit.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -94,6 +92,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="CardGameForm.resx">
+      <DependentUpon>CardGameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

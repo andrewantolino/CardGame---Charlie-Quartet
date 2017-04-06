@@ -9,11 +9,11 @@ namespace CharlieQuartet
     public class Player
     {
 
-        private List<Card> hand;
-        double balance;
-        double bet = 0;
+        public List<Card> hand;
+        public double balance;
+        public double bet;
 
-        public Player(List<Card> hand, double balance, double bet)
+        public Player(List<Card> hand, double balance)
         {
 
             //calculate the balance
@@ -47,23 +47,23 @@ namespace CharlieQuartet
 
           
         }
-       
-     
 
-        public int calculateHandValue()
+
+
+        /*public int calculateHandValue()
         {
 
 
-              // if ace is 1 or 11
-           
+            // if ace is 1 or 11
 
-             // calculating all the points
-            int points = 0; 
+
+            // calculating all the points
+            int points = 0;
 
             for (int i = 0; i < hand.Count; i++)
             {
                 points += hand[i].getPoint();
-                 if(hand[i].getNumber() == "Ace" )
+                if (hand[i].getNumber() == "Ace")
                 {
                     Console.WriteLine("what do you want Ace to be");
 
@@ -73,16 +73,18 @@ namespace CharlieQuartet
 
 
                 }
-                 else{
-                        points += hand[i].getPoint();
+                else
+                {
+                    points += hand[i].getPoint();
 
-                    }
-            return points;
+                }
+                return points;
 
-        }
+            }
+        }*/
 
        
-        public void makePayment(Card ppoint)
+        /*public void makePayment(Card ppoint)
         {
          
      
@@ -132,6 +134,6 @@ namespace CharlieQuartet
             bet = 0; 
             // optional - reset game
 
-        }
-    }
+        }*/
+    } 
 }

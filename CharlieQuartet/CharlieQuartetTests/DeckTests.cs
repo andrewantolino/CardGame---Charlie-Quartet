@@ -24,12 +24,12 @@ namespace CharlieQuartet.Tests
             Card firstcard = shitdeck.getCardByIndex(0);
             Card tenthcard = shitdeck.getCardByIndex(9);
             Card twentiethcard = shitdeck.getCardByIndex(19);
-           
+
 
 
             shitdeck.Shuffle();
 
-           
+
             Assert.AreNotSame(firstcard, shitdeck.getCardByIndex(0));
 
             Assert.AreNotSame(tenthcard, shitdeck.getCardByIndex(9));
@@ -64,9 +64,15 @@ namespace CharlieQuartet.Tests
 
             Assert.AreNotSame(twentiethCard, shitdeck.getCardByIndex(19));
 
-            
 
-            
+
+
+        }
+
+        [TestMethod()]
+        public void DeckTest()
+        {
+            Assert.Fail();
         }
     }
 }

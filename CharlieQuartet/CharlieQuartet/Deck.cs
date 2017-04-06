@@ -8,7 +8,7 @@ namespace CharlieQuartet
 {
     public class Deck
     {
-        private List<Card> _cards;
+        public List<Card> _cards;
 
             // constructor         
             public Deck()
@@ -64,7 +64,7 @@ namespace CharlieQuartet
         }
 
         // initial card deal card to player 
-        public Card DealCard ()
+        public Card DealCard()
         {
             Card dealtCard = _cards[0];
             _cards.RemoveAt(0);
