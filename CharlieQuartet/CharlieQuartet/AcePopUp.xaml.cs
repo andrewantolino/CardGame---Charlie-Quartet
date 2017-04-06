@@ -24,9 +24,5 @@ namespace CharlieQuartet
             InitializeComponent();
         }
 
-        private void ButtonOne_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

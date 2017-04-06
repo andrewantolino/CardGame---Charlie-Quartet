@@ -12,9 +12,9 @@ namespace CharlieQuartet.Tests
     public class PlayerTests
     {
         [TestMethod()]
-        public void testTest()
+        public void playerTest()
         {
-            Assert.Fail();
+            
         }
 
         [TestMethod()]

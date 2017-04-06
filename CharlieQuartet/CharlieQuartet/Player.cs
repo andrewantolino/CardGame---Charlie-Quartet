@@ -13,8 +13,9 @@ namespace CharlieQuartet
         double balance;
         double bet = 0;
 
-        public Player(List<Card> pHand, )
+        public Player(List<Card> hand, double balance, double bet)
         {
+
             //calculate the balance
             hand = new List<Card>();
             balance = 100;
@@ -57,12 +58,12 @@ namespace CharlieQuartet
            
 
              // calculating all the points
-            int points = 0;
+            int points = 0; 
 
             for (int i = 0; i < hand.Count; i++)
             {
                 points += hand[i].getPoint();
-                if (hand[i].getNumber() == "Ace")
+                 if(hand[i].getNumber() == "Ace" )
                 {
                     Console.WriteLine("what do you want Ace to be");
 
@@ -72,12 +73,10 @@ namespace CharlieQuartet
 
 
                 }
-                else
-                {
-                    points += hand[i].getPoint();
+                 else{
+                        points += hand[i].getPoint();
 
-                }
-            }
+                    }
             return points;
 
         }
