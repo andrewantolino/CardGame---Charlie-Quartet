@@ -28,233 +28,233 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.currentcardlabel = new System.Windows.Forms.Label();
+            this.balancelabel = new System.Windows.Forms.Label();
+            this.betamountlabel = new System.Windows.Forms.Label();
+            this.cardpointslabel = new System.Windows.Forms.Label();
+            this.startbutton = new System.Windows.Forms.Button();
+            this.betbutton = new System.Windows.Forms.Button();
+            this.stopbutton = new System.Windows.Forms.Button();
+            this.hitbutton = new System.Windows.Forms.Button();
+            this.balance = new System.Windows.Forms.Label();
+            this.betamount = new System.Windows.Forms.Label();
+            this.cardpoints = new System.Windows.Forms.Label();
+            this.currentcard = new System.Windows.Forms.Label();
+            this.card1 = new System.Windows.Forms.Label();
+            this.card2 = new System.Windows.Forms.Label();
+            this.card3 = new System.Windows.Forms.Label();
+            this.card4 = new System.Windows.Forms.Label();
+            this.card5 = new System.Windows.Forms.Label();
+            this.card6 = new System.Windows.Forms.Label();
+            this.card7 = new System.Windows.Forms.Label();
+            this.card8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // currentcardlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Current card:";
+            this.currentcardlabel.AutoSize = true;
+            this.currentcardlabel.Location = new System.Drawing.Point(45, 80);
+            this.currentcardlabel.Name = "currentcardlabel";
+            this.currentcardlabel.Size = new System.Drawing.Size(68, 13);
+            this.currentcardlabel.TabIndex = 0;
+            this.currentcardlabel.Text = "Current card:";
             // 
-            // label2
+            // balancelabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(453, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Balance:";
+            this.balancelabel.AutoSize = true;
+            this.balancelabel.Location = new System.Drawing.Point(453, 80);
+            this.balancelabel.Name = "balancelabel";
+            this.balancelabel.Size = new System.Drawing.Size(49, 13);
+            this.balancelabel.TabIndex = 1;
+            this.balancelabel.Text = "Balance:";
             // 
-            // label3
+            // betamountlabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(261, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Bet amount:";
+            this.betamountlabel.AutoSize = true;
+            this.betamountlabel.Location = new System.Drawing.Point(261, 80);
+            this.betamountlabel.Name = "betamountlabel";
+            this.betamountlabel.Size = new System.Drawing.Size(64, 13);
+            this.betamountlabel.TabIndex = 2;
+            this.betamountlabel.Text = "Bet amount:";
             // 
-            // label4
+            // cardpointslabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(638, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Card points:";
+            this.cardpointslabel.AutoSize = true;
+            this.cardpointslabel.Location = new System.Drawing.Point(638, 80);
+            this.cardpointslabel.Name = "cardpointslabel";
+            this.cardpointslabel.Size = new System.Drawing.Size(63, 13);
+            this.cardpointslabel.TabIndex = 3;
+            this.cardpointslabel.Text = "Card points:";
             // 
-            // button1
+            // startbutton
             // 
-            this.button1.Location = new System.Drawing.Point(48, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 100);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "START (disable when game is in progress)";
-            this.button1.UseVisualStyleBackColor = true;
+            this.startbutton.Location = new System.Drawing.Point(48, 150);
+            this.startbutton.Name = "startbutton";
+            this.startbutton.Size = new System.Drawing.Size(125, 100);
+            this.startbutton.TabIndex = 4;
+            this.startbutton.Text = "START (disable when game is in progress)";
+            this.startbutton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // betbutton
             // 
-            this.button2.Location = new System.Drawing.Point(264, 150);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 100);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "BET";
-            this.button2.UseVisualStyleBackColor = true;
+            this.betbutton.Location = new System.Drawing.Point(264, 150);
+            this.betbutton.Name = "betbutton";
+            this.betbutton.Size = new System.Drawing.Size(125, 100);
+            this.betbutton.TabIndex = 5;
+            this.betbutton.Text = "BET";
+            this.betbutton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // stopbutton
             // 
-            this.button3.Location = new System.Drawing.Point(641, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 100);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "STOP";
-            this.button3.UseVisualStyleBackColor = true;
+            this.stopbutton.Location = new System.Drawing.Point(641, 150);
+            this.stopbutton.Name = "stopbutton";
+            this.stopbutton.Size = new System.Drawing.Size(125, 100);
+            this.stopbutton.TabIndex = 6;
+            this.stopbutton.Text = "STOP";
+            this.stopbutton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // hitbutton
             // 
-            this.button4.Location = new System.Drawing.Point(456, 150);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 100);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "HIT";
-            this.button4.UseVisualStyleBackColor = true;
+            this.hitbutton.Location = new System.Drawing.Point(456, 150);
+            this.hitbutton.Name = "hitbutton";
+            this.hitbutton.Size = new System.Drawing.Size(125, 100);
+            this.hitbutton.TabIndex = 7;
+            this.hitbutton.Text = "HIT";
+            this.hitbutton.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // balance
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(508, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "BALANCE";
+            this.balance.AutoSize = true;
+            this.balance.Location = new System.Drawing.Point(508, 80);
+            this.balance.Name = "balance";
+            this.balance.Size = new System.Drawing.Size(56, 13);
+            this.balance.TabIndex = 8;
+            this.balance.Text = "BALANCE";
             // 
-            // label6
+            // betamount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(331, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "BET AMOUNT";
+            this.betamount.AutoSize = true;
+            this.betamount.Location = new System.Drawing.Point(331, 80);
+            this.betamount.Name = "betamount";
+            this.betamount.Size = new System.Drawing.Size(78, 13);
+            this.betamount.TabIndex = 9;
+            this.betamount.Text = "BET AMOUNT";
             // 
-            // label7
+            // cardpoints
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(707, 80);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 13);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "CARD POINTS";
+            this.cardpoints.AutoSize = true;
+            this.cardpoints.Location = new System.Drawing.Point(707, 80);
+            this.cardpoints.Name = "cardpoints";
+            this.cardpoints.Size = new System.Drawing.Size(80, 13);
+            this.cardpoints.TabIndex = 10;
+            this.cardpoints.Text = "CARD POINTS";
             // 
-            // label8
+            // currentcard
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(119, 80);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "CURRENT CARD";
+            this.currentcard.AutoSize = true;
+            this.currentcard.Location = new System.Drawing.Point(119, 80);
+            this.currentcard.Name = "currentcard";
+            this.currentcard.Size = new System.Drawing.Size(93, 13);
+            this.currentcard.TabIndex = 11;
+            this.currentcard.Text = "CURRENT CARD";
             // 
-            // label9
+            // card1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(45, 349);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "CARD 1";
+            this.card1.AutoSize = true;
+            this.card1.Location = new System.Drawing.Point(45, 349);
+            this.card1.Name = "card1";
+            this.card1.Size = new System.Drawing.Size(46, 13);
+            this.card1.TabIndex = 12;
+            this.card1.Text = "CARD 1";
             // 
-            // label10
+            // card2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(127, 349);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "CARD 2";
+            this.card2.AutoSize = true;
+            this.card2.Location = new System.Drawing.Point(127, 349);
+            this.card2.Name = "card2";
+            this.card2.Size = new System.Drawing.Size(46, 13);
+            this.card2.TabIndex = 13;
+            this.card2.Text = "CARD 2";
             // 
-            // label11
+            // card3
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(264, 348);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 13);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "CARD 3";
+            this.card3.AutoSize = true;
+            this.card3.Location = new System.Drawing.Point(264, 348);
+            this.card3.Name = "card3";
+            this.card3.Size = new System.Drawing.Size(46, 13);
+            this.card3.TabIndex = 14;
+            this.card3.Text = "CARD 3";
             // 
-            // label12
+            // card4
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(347, 347);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 13);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "CARD 4";
+            this.card4.AutoSize = true;
+            this.card4.Location = new System.Drawing.Point(347, 347);
+            this.card4.Name = "card4";
+            this.card4.Size = new System.Drawing.Size(46, 13);
+            this.card4.TabIndex = 15;
+            this.card4.Text = "CARD 4";
             // 
-            // label13
+            // card5
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(456, 349);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "CARD 5";
+            this.card5.AutoSize = true;
+            this.card5.Location = new System.Drawing.Point(456, 349);
+            this.card5.Name = "card5";
+            this.card5.Size = new System.Drawing.Size(46, 13);
+            this.card5.TabIndex = 16;
+            this.card5.Text = "CARD 5";
             // 
-            // label14
+            // card6
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(539, 349);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 13);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "CARD 6";
+            this.card6.AutoSize = true;
+            this.card6.Location = new System.Drawing.Point(539, 349);
+            this.card6.Name = "card6";
+            this.card6.Size = new System.Drawing.Size(46, 13);
+            this.card6.TabIndex = 17;
+            this.card6.Text = "CARD 6";
             // 
-            // label15
+            // card7
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(641, 349);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 13);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "CARD 7";
+            this.card7.AutoSize = true;
+            this.card7.Location = new System.Drawing.Point(641, 349);
+            this.card7.Name = "card7";
+            this.card7.Size = new System.Drawing.Size(46, 13);
+            this.card7.TabIndex = 18;
+            this.card7.Text = "CARD 7";
             // 
-            // label16
+            // card8
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(724, 349);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 13);
-            this.label16.TabIndex = 19;
-            this.label16.Text = "CARD 8";
+            this.card8.AutoSize = true;
+            this.card8.Location = new System.Drawing.Point(724, 349);
+            this.card8.Name = "card8";
+            this.card8.Size = new System.Drawing.Size(46, 13);
+            this.card8.TabIndex = 19;
+            this.card8.Text = "CARD 8";
             // 
             // CardGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(852, 507);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.card8);
+            this.Controls.Add(this.card7);
+            this.Controls.Add(this.card6);
+            this.Controls.Add(this.card5);
+            this.Controls.Add(this.card4);
+            this.Controls.Add(this.card3);
+            this.Controls.Add(this.card2);
+            this.Controls.Add(this.card1);
+            this.Controls.Add(this.currentcard);
+            this.Controls.Add(this.cardpoints);
+            this.Controls.Add(this.betamount);
+            this.Controls.Add(this.balance);
+            this.Controls.Add(this.hitbutton);
+            this.Controls.Add(this.stopbutton);
+            this.Controls.Add(this.betbutton);
+            this.Controls.Add(this.startbutton);
+            this.Controls.Add(this.cardpointslabel);
+            this.Controls.Add(this.betamountlabel);
+            this.Controls.Add(this.balancelabel);
+            this.Controls.Add(this.currentcardlabel);
             this.Name = "CardGameForm";
             this.Text = "CardGameForm";
             this.ResumeLayout(false);
@@ -264,25 +264,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label currentcardlabel;
+        private System.Windows.Forms.Label balancelabel;
+        private System.Windows.Forms.Label betamountlabel;
+        private System.Windows.Forms.Label cardpointslabel;
+        private System.Windows.Forms.Button startbutton;
+        private System.Windows.Forms.Button betbutton;
+        private System.Windows.Forms.Button stopbutton;
+        private System.Windows.Forms.Button hitbutton;
+        private System.Windows.Forms.Label balance;
+        private System.Windows.Forms.Label betamount;
+        private System.Windows.Forms.Label cardpoints;
+        private System.Windows.Forms.Label currentcard;
+        private System.Windows.Forms.Label card1;
+        private System.Windows.Forms.Label card2;
+        private System.Windows.Forms.Label card3;
+        private System.Windows.Forms.Label card4;
+        private System.Windows.Forms.Label card5;
+        private System.Windows.Forms.Label card6;
+        private System.Windows.Forms.Label card7;
+        private System.Windows.Forms.Label card8;
     }
 }
