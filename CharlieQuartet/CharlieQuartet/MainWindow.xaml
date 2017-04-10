@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CharlieQuartet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="355.882" Width="1112.255">
+    <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,86,0">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.401"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Label x:Name="currentcardlabel" Content="Current card:" HorizontalAlignment="Left" Margin="27,68,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="currentcard" Content="CURRENT CARD" HorizontalAlignment="Left" Margin="110,68,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="betamountlabel" Content="Bet amount:" HorizontalAlignment="Left" Margin="329,68,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="betamount" Content="BET AMOUNT" HorizontalAlignment="Left" Margin="415,68,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="balancelabel" Content="Balance:" HorizontalAlignment="Left" Margin="588,68,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="balance" Content="BALANCE" HorizontalAlignment="Left" Margin="664,68,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="cardpointslabel" Content="Card points:" HorizontalAlignment="Left" Margin="838,68,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="cardpoints" Content="CARD POINTS" HorizontalAlignment="Left" Margin="928,68,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="startbutton" Content="START (disable when game is in progress)" HorizontalAlignment="Left" Margin="27,124,0,0" VerticalAlignment="Top" Width="238" Height="39"/>
+        <Button x:Name="betbutton" Content="BET" HorizontalAlignment="Left" Margin="377,124,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
+        <Button x:Name="hitbutton" Content="HIT" HorizontalAlignment="Left" Margin="624,124,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
+        <Button x:Name="stopbutton" Content="STOP" HorizontalAlignment="Left" Margin="887,124,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
+        <Label x:Name="card1" Content="CARD 1" HorizontalAlignment="Left" Margin="27,215,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="card2" Content="CARD 2" HorizontalAlignment="Left" Margin="154,215,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="card3" Content="CARD 3" HorizontalAlignment="Left" Margin="329,223,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="card4" Content="CARD 4" HorizontalAlignment="Left" Margin="448,223,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="card5" Content="CARD 5" HorizontalAlignment="Left" Margin="588,223,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="card6" Content="CARD 6" HorizontalAlignment="Left" Margin="673,223,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="card7" Content="CARD 7" HorizontalAlignment="Left" Margin="838,223,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="card8" Content="CARD 8" HorizontalAlignment="Left" Margin="967,223,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
