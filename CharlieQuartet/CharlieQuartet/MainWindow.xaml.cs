@@ -27,7 +27,7 @@ namespace CharlieQuartet
 
         private void startbutton_Click(object sender, RoutedEventArgs e)
         {
-            
+            Player testPlayer = new CharlieQuartet.Player()
         }
     }
 }
