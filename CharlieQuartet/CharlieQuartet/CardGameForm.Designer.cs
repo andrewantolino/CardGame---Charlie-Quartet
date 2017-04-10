@@ -48,6 +48,7 @@
             this.card6 = new System.Windows.Forms.Label();
             this.card7 = new System.Windows.Forms.Label();
             this.card8 = new System.Windows.Forms.Label();
+            this.cardList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // currentcardlabel
@@ -231,11 +232,20 @@
             this.card8.TabIndex = 19;
             this.card8.Text = "CARD 8";
             // 
+            // cardList
+            // 
+            this.cardList.FormattingEnabled = true;
+            this.cardList.Location = new System.Drawing.Point(359, 496);
+            this.cardList.Name = "cardList";
+            this.cardList.Size = new System.Drawing.Size(162, 95);
+            this.cardList.TabIndex = 20;
+            // 
             // CardGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 507);
+            this.ClientSize = new System.Drawing.Size(915, 644);
+            this.Controls.Add(this.cardList);
             this.Controls.Add(this.card8);
             this.Controls.Add(this.card7);
             this.Controls.Add(this.card6);
@@ -285,5 +295,6 @@
         private System.Windows.Forms.Label card6;
         private System.Windows.Forms.Label card7;
         private System.Windows.Forms.Label card8;
+        private System.Windows.Forms.ListBox cardList;
     }
 }

@@ -13,11 +13,11 @@ namespace CharlieQuartet
         public double balance;
         public double bet;
 
-        public Player(List<Card> hand)
+        public Player(List<Card> pHand)
         {
 
             //calculate the balance
-            hand = new List<Card>();
+            hand = pHand;
             balance = 100;
             if (balance<= 5)
             {

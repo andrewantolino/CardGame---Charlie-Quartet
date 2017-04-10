@@ -19,7 +19,7 @@ namespace CharlieQuartet
 
         private void startbutton_Click(object sender, EventArgs e)
         {
-            Player newPlayer = new Player();
+           
         }
     }
 }

@@ -17,7 +17,7 @@ namespace CharlieQuartet.Tests
             double vBalance = 100;
             List<Card> testHand = new List<Card>();
 
-            Player testPlayer = new Player(testHand, vBalance);
+            Player testPlayer = new Player(testHand);
 
             Assert.AreEqual(100, vBalance);
             Assert.IsInstanceOfType(testHand, typeof(List<Card>));
@@ -35,7 +35,7 @@ namespace CharlieQuartet.Tests
         {
             double vBalance = 100;
             List<Card> testHand = new List<Card>();
-            Player testPlayer = new Player(testHand,vBalance);
+            Player testPlayer = new Player(testHand);
             Deck testDeck = new Deck();
             Card vFirst = testDeck._cards[0];
             testDeck.DealCard();
