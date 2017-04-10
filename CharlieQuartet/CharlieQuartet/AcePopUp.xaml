@@ -8,7 +8,8 @@
         Title="AcePopUp" Height="126.025" Width="355.329">
     <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,30,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="221*"/>
+            <ColumnDefinition Width="96*"/>
             <ColumnDefinition Width="0"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
@@ -20,8 +21,8 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Label x:Name="label" Content="You received an Ace. What value do you want it to be?" HorizontalAlignment="Left" Margin="19,25,0,0" VerticalAlignment="Top" Height="26" Width="303"/>
-        <Button x:Name="ButtonOne" Content="One" HorizontalAlignment="Left" Margin="63,66,0,0" VerticalAlignment="Top" Width="75" Height="22" Click="ButtonOne_Click"/>
-        <Button x:Name="ButtonEleven" Content="Eleven" HorizontalAlignment="Left" Margin="181,66,0,0" VerticalAlignment="Top" Width="75" Height="22"/>
+        <Label x:Name="label" Content="You received an Ace. What value do you want it to be?" HorizontalAlignment="Left" Margin="19,25,-5,0" VerticalAlignment="Top" Height="26" Width="303" Grid.ColumnSpan="4"/>
+        <Button x:Name="ButtonOne" Content="One" Margin="63,66,83,0" VerticalAlignment="Top" Height="22" Click="ButtonOne_Click"/>
+        <Button x:Name="ButtonEleven" Content="Eleven" HorizontalAlignment="Left" Margin="181,66,0,0" VerticalAlignment="Top" Width="75" Height="22" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

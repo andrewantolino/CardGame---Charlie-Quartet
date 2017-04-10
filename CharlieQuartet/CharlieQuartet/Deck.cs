@@ -8,7 +8,7 @@ namespace CharlieQuartet
 {
     public class Deck
     {
-        private List<Card> _cards;
+        public List<Card> _cards;
 
             // constructor         
             public Deck()
@@ -16,6 +16,7 @@ namespace CharlieQuartet
                     // setting up suits rank and points for cards
                     String[] mySuits = new String[] { "Spades", "Hearts", "Clubs", "Diamonds" };
                     String[] myRank = new String[] { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten" ,"Jack", "Queen", "King" };
+
 
                     Dictionary<string, int> myPoints = new Dictionary<string, int>();
                     myPoints.Add("Ace", 0);
@@ -64,7 +65,7 @@ namespace CharlieQuartet
         }
 
         // initial card deal card to player 
-        public Card DealCard ()
+        public Card DealCard()
         {
             Card dealtCard = _cards[0];
             _cards.RemoveAt(0);

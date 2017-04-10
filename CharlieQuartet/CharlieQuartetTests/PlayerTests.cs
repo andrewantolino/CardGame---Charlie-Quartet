@@ -14,21 +14,36 @@ namespace CharlieQuartet.Tests
         [TestMethod()]
         public void playerTest()
         {
-            
+            double vBalance = 100;
+            List<Card> testHand = new List<Card>();
+
+            Player testPlayer = new Player(testHand, vBalance);
+
+            Assert.AreEqual(100, vBalance);
+            Assert.IsInstanceOfType(testHand, typeof(List<Card>));
+
         }
 
         [TestMethod()]
         public void placeBetTest()
         {
-            Assert.Fail();
+            
         }
 
         [TestMethod()]
         public void addCardToHandTest()
         {
-            Assert.Fail();
-        }
+            double vBalance = 100;
+            List<Card> testHand = new List<Card>();
+            Player testPlayer = new Player(testHand,vBalance);
+            Deck testDeck = new Deck();
+            Card vFirst = testDeck._cards[0];
+            testDeck.DealCard();
+            testPlayer.addCardToHand(vFirst);
 
+            Assert.IsInstanceOfType(vFirst, typeof(Card));
+        }
+  
         [TestMethod()]
         public void calculateHandValueTest()
         {

@@ -24,5 +24,9 @@ namespace CharlieQuartet
             InitializeComponent();
         }
 
+        public void ButtonOne_Click(object ssender, RoutedEventArgs e)
+        {
+            object tagValue = (e.Source as Button).Tag;
+        }
     }
 }

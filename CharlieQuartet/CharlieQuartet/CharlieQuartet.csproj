@@ -78,8 +78,6 @@
     <Compile Include="CardGameForm.Designer.cs">
       <DependentUpon>CardGameForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rank.cs" />
-    <Compile Include="Suit.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

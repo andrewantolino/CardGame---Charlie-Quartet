@@ -12,9 +12,26 @@ namespace CharlieQuartet.Tests
     public class DeckTests
     {
         [TestMethod()]
-        public void testTest()
+        public void DeckTest()
         {
-            Assert.Fail();
+            // if we have store all the suits and rank 
+            Deck shitdeck = new Deck();
+            Deck firstPoint = points.getpointsByIndex();
+            
+            Card firstcard = shitdeck.getCardByIndex(0);
+            Card tenthcard = shitdeck.getCardByIndex(9);
+            Card twentiethcard = shitdeck.getCardByIndex(19);
+
+
+            Assert.AreEqual(firstcard, shitdeck.getCardByIndex(0));
+            Assert.AreEqual(tenthcard, shitdeck.getCardByIndex(9));
+            Assert.AreEqual(twentiethcard, shitdeck.getCardByIndex(19));
+
+            // if we are returning point value
+
+
+            // if we are getting points depending on suit an rank
+
         }
 
         [TestMethod()]
@@ -24,12 +41,12 @@ namespace CharlieQuartet.Tests
             Card firstcard = shitdeck.getCardByIndex(0);
             Card tenthcard = shitdeck.getCardByIndex(9);
             Card twentiethcard = shitdeck.getCardByIndex(19);
-           
+
 
 
             shitdeck.Shuffle();
 
-           
+
             Assert.AreNotSame(firstcard, shitdeck.getCardByIndex(0));
 
             Assert.AreNotSame(tenthcard, shitdeck.getCardByIndex(9));
@@ -64,9 +81,11 @@ namespace CharlieQuartet.Tests
 
             Assert.AreNotSame(twentiethCard, shitdeck.getCardByIndex(19));
 
-            
 
-            
+
+
         }
+
+       
     }
 }
