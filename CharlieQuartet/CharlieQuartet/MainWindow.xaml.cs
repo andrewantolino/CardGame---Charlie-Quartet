@@ -43,5 +43,38 @@ namespace CharlieQuartet
             }
             
         }
+
+        private void startbutton_Click(object sender, RoutedEventArgs e)
+        {
+            Deck testDeck = new Deck();
+            testDeck.Shuffle();
+            List<Card> testHand = new List<Card>();
+            Player testPlayer = new CharlieQuartet.Player(testHand);
+            balance.Content = testPlayer.balance;
+
+
+            Card testCard1 = testDeck.DealCard();
+
+
+            testPlayer.addCardToHand(testCard1);
+            //card1.Content = testPlayer.hand;
+
+            displayHand(testPlayer.hand);
+
+
+        }
+
+        private void displayHand(List<Card> pHand)
+        {
+            // card1.Content =  pHand[0].ToString();
+
+            cardList.Items.Add(pHand[0]);
+
+        }
+
+        private void clearHandDisplay()
+        {
+            cardList.Items.Clear();
+        }
     }
 }

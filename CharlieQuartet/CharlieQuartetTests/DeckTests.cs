@@ -16,7 +16,7 @@ namespace CharlieQuartet.Tests
         {
             // if we have store all the suits and rank 
             Deck shitdeck = new Deck();
-            Deck firstPoint = points.getpointsByIndex();
+            //Deck firstPoint = points.getpointsByIndex();
             
             Card firstcard = shitdeck.getCardByIndex(0);
             Card tenthcard = shitdeck.getCardByIndex(9);

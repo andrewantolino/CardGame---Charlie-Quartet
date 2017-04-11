@@ -16,5 +16,10 @@ namespace CharlieQuartet
         {
             InitializeComponent();
         }
+
+        private void startbutton_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

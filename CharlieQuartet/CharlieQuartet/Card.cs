@@ -35,6 +35,12 @@ namespace CharlieQuartet
             return _suit;
         }
 
+        public override string ToString()
+        {
+            // return base.ToString();
+            return number + " of " + _suit;
+        }
+
     }
 }
     
