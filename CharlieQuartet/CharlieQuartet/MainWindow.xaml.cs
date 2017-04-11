@@ -29,6 +29,19 @@ namespace CharlieQuartet
             
         }
 
+        private void displayHand(List<Card> pHand)
+        {
+            for (int i = 0; i < pHand.Count; i++)
+            {
+                cardList.Items.Add(pHand[i]);
+            }
+
+        }
+
+        private void clearHandDisplay()
+        {
+            cardList.Items.Clear();
+        }
 
         private void startbutton_Click(object sender, RoutedEventArgs e)
         {
@@ -46,23 +59,14 @@ namespace CharlieQuartet
             displayHand(testPlayer.hand);
             startbutton.IsEnabled = false;
             betbutton.IsEnabled = true;
-            hitbutton.IsEnabled = true;
             stopbutton.IsEnabled = true;
 
         }
 
-        private void displayHand(List<Card> pHand)
+        private void betbutton_Click(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < pHand.Count; i++)
-            {
-                cardList.Items.Add(pHand[i]);
-            }
-            
-        }
-
-        private void clearHandDisplay()
-        {
-            cardList.Items.Clear();
+            betWindow betPopUp = new betWindow();
+            betPopUp.ShowDialog();
         }
     }
 }
