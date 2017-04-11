@@ -22,6 +22,7 @@ namespace CharlieQuartet
     {
         Player testPlayer;
         List<Card> testHand;
+        MainWindow thisWindow;
 
         public MainWindow()
         {
@@ -68,7 +69,7 @@ namespace CharlieQuartet
         private void betbutton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(testPlayer.bet.ToString());
-            betWindow betPopUp = new betWindow(testPlayer);
+            betWindow betPopUp = new betWindow(testPlayer, thisWindow);
             betPopUp.ShowDialog();
 
             MessageBox.Show(testPlayer.bet.ToString());

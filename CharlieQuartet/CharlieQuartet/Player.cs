@@ -31,7 +31,7 @@ namespace CharlieQuartet
         {
             //calculate the bet amount 
             bet = pBet;
-            balance = balance - pBet;
+            //balance = balance - bet;
             return bet;
 
             //seting how much player can place bet  
@@ -52,7 +52,7 @@ namespace CharlieQuartet
 
 
 
-        /* public int CalculateHandValue()
+         public int CalculateHandValue()
         {
 
 
@@ -83,14 +83,12 @@ namespace CharlieQuartet
            
             }
             return points;
-        } */
+        } 
 
        
         public void makePayment(Card pPoint)
         {
          
-     
-
             // calculate point value of hand
             int total = CalculateHandValue();
             // calculate payout amount based on points and bet
