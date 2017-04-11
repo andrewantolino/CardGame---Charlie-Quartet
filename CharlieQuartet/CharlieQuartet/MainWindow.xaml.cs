@@ -78,5 +78,11 @@ namespace CharlieQuartet
         {
             this.Close();
         }
+
+        /*public int getAceByNumber(int pNumber)
+        {
+            // If the index value is 0 and/or the card number = Ace, that obviously means you've drawn an Ace card. When that happens, a popup will appear that will ask the player to decide the value for the card, the choice is either 1 or 11.
+            return 
+        }*/
     }
 }

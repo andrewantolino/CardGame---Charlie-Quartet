@@ -52,7 +52,7 @@ namespace CharlieQuartet
 
 
 
-        public int CalculateHandValue()
+        /* public int CalculateHandValue()
         {
 
 
@@ -83,7 +83,7 @@ namespace CharlieQuartet
            
             }
             return points;
-        }
+        } */
 
        
         public void makePayment(Card pPoint)

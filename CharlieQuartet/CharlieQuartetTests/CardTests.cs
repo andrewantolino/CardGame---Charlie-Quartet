@@ -15,7 +15,7 @@ namespace CharlieQuartet.Tests
         [TestMethod()]
         public void CardTest()
         {
-            //Card vCard = new Card(string pnumber, Suit psuit, int ppoint);
+            //Card vCard = new Card(string pNumber, Suit pSuit, int pPoint);
 
             Card vCard = new Card("King", "Hearts", 10);
 
