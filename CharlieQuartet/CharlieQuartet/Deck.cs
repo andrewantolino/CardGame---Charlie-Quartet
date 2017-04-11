@@ -17,6 +17,7 @@ namespace CharlieQuartet
                     String[] mySuits = new String[] { "Spades", "Hearts", "Clubs", "Diamonds" };
                     String[] myRank = new String[] { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten" ,"Jack", "Queen", "King" };
 
+
                     Dictionary<string, int> myPoints = new Dictionary<string, int>();
                     myPoints.Add("Ace", 0);
                     myPoints.Add("Two", 2);
