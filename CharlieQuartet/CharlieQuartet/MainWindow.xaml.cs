@@ -20,13 +20,15 @@ namespace CharlieQuartet
     /// </summary>
     public partial class MainWindow : Window
     {
+        Player testPlayer;
+        List<Card> testHand;
+
         public MainWindow()
         {
             InitializeComponent();
             betbutton.IsEnabled = false;
             hitbutton.IsEnabled = false;
             stopbutton.IsEnabled = false;
-            
         }
 
         private void displayHand(List<Card> pHand)
@@ -47,8 +49,8 @@ namespace CharlieQuartet
         {
             Deck gameDeck = new Deck();
             gameDeck.Shuffle();
-            List<Card> testHand = new List<Card>();
-            Player testPlayer = new CharlieQuartet.Player(testHand);
+            testHand = new List<Card>();
+            testPlayer = new CharlieQuartet.Player(testHand);
             balance.Content = testPlayer.balance;
 
             for (int i = 0; i < 2; i++)
@@ -65,8 +67,16 @@ namespace CharlieQuartet
 
         private void betbutton_Click(object sender, RoutedEventArgs e)
         {
-            betWindow betPopUp = new betWindow();
+            MessageBox.Show(testPlayer.bet.ToString());
+            betWindow betPopUp = new betWindow(testPlayer);
             betPopUp.ShowDialog();
+
+            MessageBox.Show(testPlayer.bet.ToString());
+        }
+
+        private void stopbutton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

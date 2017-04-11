@@ -19,9 +19,12 @@ namespace CharlieQuartet
     /// </summary>
     public partial class betWindow : Window
     {
-        public betWindow()
+        Player thisPlayer;
+
+        public betWindow(Player testPlayer)
         {
             InitializeComponent();
+            thisPlayer = testPlayer;
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -31,15 +34,20 @@ namespace CharlieQuartet
 
         private void betWindowButton_Click(object sender, RoutedEventArgs e)
         {
+            double vBet;
             if (String.IsNullOrEmpty(betWindowTextBox.Text))
             {
                 MessageBox.Show("Please enter a whole number");
             }
-            /*else if (betWindowTextBox.Text is typeof string))
+            else if (!(Double.TryParse(betWindowTextBox.Text, out vBet)))
             {
-
+                MessageBox.Show("Please enter a number");
             }
-            */
+            else if (Double.TryParse(betWindowTextBox.Text, out vBet))
+            {
+                thisPlayer.placeBet(vBet);
+                this.Close();
+            }
         }
     }
 }

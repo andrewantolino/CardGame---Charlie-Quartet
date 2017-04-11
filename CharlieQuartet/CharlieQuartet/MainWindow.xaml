@@ -1,4 +1,4 @@
-﻿<Window x:Class="CharlieQuartet.MainWindow"
+﻿<Window x:Name="MainWindow1" x:Class="CharlieQuartet.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="474.509" Width="255.777">
     <Grid RenderTransformOrigin="0.5,0.5" Margin="0,0,5.2,3.8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="55*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
@@ -16,16 +20,16 @@
             </TransformGroup>
         </Grid.RenderTransform>
         <Label x:Name="betamountlabel" Content="Bet amount:" HorizontalAlignment="Left" Margin="29,37,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="betamount" Content="BET AMOUNT" HorizontalAlignment="Left" Margin="112,39,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="betamount" Content="BET AMOUNT" HorizontalAlignment="Left" Margin="112,39,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label x:Name="balancelabel" Content="Balance:" HorizontalAlignment="Left" Margin="29,94,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="balance" Content="BALANCE" HorizontalAlignment="Left" Margin="112,96,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="balance" Content="BALANCE" HorizontalAlignment="Left" Margin="112,96,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label x:Name="cardpointslabel" Content="Card points:" HorizontalAlignment="Left" Margin="30,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
-        <Label x:Name="cardpoints" Content="CARD POINTS" HorizontalAlignment="Left" Margin="112,65,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="cardpoints" Content="CARD POINTS" HorizontalAlignment="Left" Margin="112,65,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button x:Name="startbutton" Content="START" HorizontalAlignment="Left" Margin="22,205,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="startbutton_Click"/>
         <Button x:Name="betbutton" Content="BET" HorizontalAlignment="Left" Margin="22,139,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="betbutton_Click"/>
-        <Button x:Name="hitbutton" Content="HIT" HorizontalAlignment="Left" Margin="122,139,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
-        <Button x:Name="stopbutton" Content="STOP" HorizontalAlignment="Left" Margin="122,205,0,0" VerticalAlignment="Top" Width="75" Height="39"/>
-        <ListBox x:Name="cardList" HorizontalAlignment="Left" Height="169" Margin="22,262,0,0" VerticalAlignment="Top" Width="195"/>
+        <Button x:Name="hitbutton" Content="HIT" HorizontalAlignment="Left" Margin="122,139,0,0" VerticalAlignment="Top" Width="75" Height="39" Grid.ColumnSpan="2"/>
+        <Button x:Name="stopbutton" Content="STOP" HorizontalAlignment="Left" Margin="122,205,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="stopbutton_Click" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="cardList" HorizontalAlignment="Left" Height="169" Margin="22,262,0,0" VerticalAlignment="Top" Width="195" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
