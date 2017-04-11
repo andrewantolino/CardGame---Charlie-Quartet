@@ -23,6 +23,25 @@ namespace CharlieQuartet
         public MainWindow()
         {
             InitializeComponent();
+            //string vGreeting = "Hello Matt!";
+            
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Deck gameDeck = new CharlieQuartet.Deck();
+            List<Card> hand = new List<Card>();
+            Player andrew = new Player(hand);
+            if (andrew.balance == 100.00)
+            {
+                andrewsLabel.Content = andrew.balance;
+                testLabel.Content = "Passed!";
+            }
+            else
+            {
+                andrewsLabel.Content = "Failed";
+            }
+            
         }
     }
 }
