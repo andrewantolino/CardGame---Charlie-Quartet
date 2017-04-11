@@ -23,37 +23,41 @@ namespace CharlieQuartet
         public MainWindow()
         {
             InitializeComponent();
-            //string vGreeting = "Hello Matt!";
+            betbutton.IsEnabled = false;
+            hitbutton.IsEnabled = false;
+            stopbutton.IsEnabled = false;
             
         }
 
 
         private void startbutton_Click(object sender, RoutedEventArgs e)
         {
-            Deck testDeck = new Deck();
-            testDeck.Shuffle();
+            Deck gameDeck = new Deck();
+            gameDeck.Shuffle();
             List<Card> testHand = new List<Card>();
             Player testPlayer = new CharlieQuartet.Player(testHand);
             balance.Content = testPlayer.balance;
 
-
-            Card testCard1 = testDeck.DealCard();
-
-
-            testPlayer.addCardToHand(testCard1);
-            //card1.Content = testPlayer.hand;
-
+            for (int i = 0; i < 2; i++)
+            {
+                testPlayer.addCardToHand(gameDeck.DealCard());
+            }
+            
             displayHand(testPlayer.hand);
-
+            startbutton.IsEnabled = false;
+            betbutton.IsEnabled = true;
+            hitbutton.IsEnabled = true;
+            stopbutton.IsEnabled = true;
 
         }
 
         private void displayHand(List<Card> pHand)
         {
-            // card1.Content =  pHand[0].ToString();
-
-            cardList.Items.Add(pHand[0]);
-
+            for (int i = 0; i < pHand.Count; i++)
+            {
+                cardList.Items.Add(pHand[i]);
+            }
+            
         }
 
         private void clearHandDisplay()
