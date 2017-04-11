@@ -94,6 +94,7 @@
             this.startbutton.TabIndex = 4;
             this.startbutton.Text = "START (disable when game is in progress)";
             this.startbutton.UseVisualStyleBackColor = true;
+            this.startbutton.Click += new System.EventHandler(this.startbutton_Click);
             // 
             // betbutton
             // 
