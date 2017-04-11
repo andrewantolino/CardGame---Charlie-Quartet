@@ -37,5 +37,12 @@ namespace CharlieQuartet.Tests
             Card vCard = new Card("King", "Hearts", 10);
             Assert.AreEqual(vCard.getSuit(), "Hearts");
         }
+
+        [TestMethod()]
+        public void getPointTest()
+        {
+            Card vCard = new Card("King", "Hearts", 10);
+            Assert.AreEqual(vCard.getPoint(), 10);
+        }
     }
 }

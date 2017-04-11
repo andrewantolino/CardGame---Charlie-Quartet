@@ -21,21 +21,23 @@ namespace CharlieQuartet
             balance = 100;
             if (balance<= 5)
             {
-                Console.WriteLine("not enough money? heres some so you can keep playing");
+                Console.WriteLine("Strapped for cash? Here's a little bonus to keep you going!");
                 balance = 100;
             }
             
         }
 
-        public void placeBet(double pbet)
+        public double placeBet(double pBet)
         {
             //calculate the bet amount 
-            balance = balance - pbet;
-            bet = pbet;
+            bet = pBet;
+            balance = balance - pBet;
+            return bet;
 
             //seting how much player can place bet  
-            if (pbet > balance)
-                Console.WriteLine("bet to high, make a different be.");
+            /* if (pBet > balance)
+                Console.WriteLine("It seems you're a little short on funds for that, try something more affordable."); */
+
         }
         //if bet == balance - 1 thn return error " not enough money"
         //else bet is placed
@@ -84,7 +86,7 @@ namespace CharlieQuartet
         }
 
        
-        public void makePayment(Card ppoint)
+        public void makePayment(Card pPoint)
         {
          
      

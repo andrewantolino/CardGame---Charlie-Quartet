@@ -12,11 +12,11 @@ namespace CharlieQuartet
         private string _suit;
         private int point;
 
-        public Card(String pnumber, string psuit, int ppoint)
+        public Card(String pNumber, string pSuit, int pPoint)
         {
-            _suit = psuit;
-            number = pnumber;
-            point = ppoint;
+            _suit = pSuit;
+            number = pNumber;
+            point = pPoint;
         }
 
 
