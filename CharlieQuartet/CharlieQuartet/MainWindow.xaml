@@ -22,7 +22,7 @@
         <Label x:Name="betamountlabel" Content="Bet amount:" HorizontalAlignment="Left" Margin="29,37,0,0" VerticalAlignment="Top"/>
         <Label x:Name="betamount" Content="BET AMOUNT" HorizontalAlignment="Left" Margin="112,39,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label x:Name="balancelabel" Content="Balance:" HorizontalAlignment="Left" Margin="29,94,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="balance" Content="BALANCE" HorizontalAlignment="Left" Margin="112,96,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="balance" Content="BALANCE" HorizontalAlignment="Left" Margin="111,96,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Label x:Name="cardpointslabel" Content="Card points:" HorizontalAlignment="Left" Margin="30,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
         <Label x:Name="cardpoints" Content="CARD POINTS" HorizontalAlignment="Left" Margin="112,65,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button x:Name="startbutton" Content="START" HorizontalAlignment="Left" Margin="22,205,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="startbutton_Click"/>

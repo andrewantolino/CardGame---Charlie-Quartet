@@ -10,15 +10,18 @@ namespace CharlieQuartet
     {
 
         public List<Card> hand;
-        public double balance;
         public double bet;
+        public double balance;
+        
 
         public Player(List<Card> pHand)
         {
 
             //calculate the balance
             hand = pHand;
+            bet = 0;
             balance = 100;
+            
             if (balance<= 5)
             {
                 Console.WriteLine("Strapped for cash? Here's a little bonus to keep you going!");

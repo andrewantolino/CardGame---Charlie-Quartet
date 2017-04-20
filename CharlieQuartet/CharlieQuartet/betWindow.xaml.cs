@@ -21,6 +21,8 @@ namespace CharlieQuartet
     {
         Player thisPlayer;
         MainWindow editForm;
+        double vBet;
+
 
         public betWindow(Player testPlayer, MainWindow mainForm)
         {
@@ -29,32 +31,30 @@ namespace CharlieQuartet
             editForm = mainForm;
         }
 
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
+        
         private void betWindowButton_Click(object sender, RoutedEventArgs e)
         {
-            double vBet = Convert.ToDouble(betWindowTextBox.Text);
-            double vNewBalance;
+
+            //double vNewBalance;
+
             if (String.IsNullOrEmpty(betWindowTextBox.Text))
             {
                 MessageBox.Show("Please enter a whole number");
             }
             else if (!(Double.TryParse(betWindowTextBox.Text, out vBet)))
             {
-                MessageBox.Show("Please enter a number");
+                MessageBox.Show("Please enter a whole number");
             }
             else if (Double.TryParse(betWindowTextBox.Text, out vBet))
             {
-                vBet = Convert.ToDouble(betWindowTextBox.Text);
-                thisPlayer.placeBet(vBet);
-                vNewBalance = thisPlayer.balance - vBet;
-                //editForm.betamountlabel.Content = vBet;
-                editForm.balance.Content = vNewBalance;
-                
+                double vConvBet = Convert.ToDouble(betWindowTextBox.Text);
+                thisPlayer.placeBet(vConvBet);
+                thisPlayer.balance -= thisPlayer.bet;
+                editForm.balance.Content = thisPlayer.balance;
+                editForm.betamount.Content = thisPlayer.bet;
+                editForm.betbutton.IsEnabled = false;
                 this.Close();
+
             }
         }
     }

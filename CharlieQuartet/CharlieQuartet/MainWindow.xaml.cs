@@ -22,7 +22,7 @@ namespace CharlieQuartet
     {
         Player testPlayer;
         List<Card> testHand;
-        MainWindow thisWindow;
+
 
         public MainWindow()
         {
@@ -58,7 +58,7 @@ namespace CharlieQuartet
             {
                 testPlayer.addCardToHand(gameDeck.DealCard());
             }
-            
+
             displayHand(testPlayer.hand);
             startbutton.IsEnabled = false;
             betbutton.IsEnabled = true;
@@ -68,12 +68,18 @@ namespace CharlieQuartet
 
         private void betbutton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(testPlayer.bet.ToString());
-            betWindow betPopUp = new betWindow(testPlayer, thisWindow);
+            MainWindow mainForm = new MainWindow();
+            betWindow betPopUp = new betWindow(testPlayer, mainForm);
             betPopUp.ShowDialog();
-
             MessageBox.Show(testPlayer.bet.ToString());
+            balance.Content = testPlayer.balance;
+            betamount.Content = testPlayer.bet;
         }
+        
+        /*public double getBet()
+        {
+            
+        }*/
 
         private void stopbutton_Click(object sender, RoutedEventArgs e)
         {
@@ -85,5 +91,6 @@ namespace CharlieQuartet
             // If the index value is 0 and/or the card number = Ace, that obviously means you've drawn an Ace card. When that happens, a popup will appear that will ask the player to decide the value for the card, the choice is either 1 or 11.
             return 
         }*/
+        
     }
 }
