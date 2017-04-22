@@ -49,10 +49,10 @@ namespace CharlieQuartet
             {
                 double vConvBet = Convert.ToDouble(betWindowTextBox.Text);
                 thisPlayer.placeBet(vConvBet);
-                thisPlayer.balance -= thisPlayer.bet;
-                editForm.balance.Content = thisPlayer.balance;
-                editForm.betamount.Content = thisPlayer.bet;
-                editForm.betbutton.IsEnabled = false;
+                //thisPlayer.balance -= thisPlayer.bet;
+                //editForm.balance.Content = thisPlayer.balance;
+                //editForm.betamount.Content = thisPlayer.bet;
+                
                 this.Close();
 
             }

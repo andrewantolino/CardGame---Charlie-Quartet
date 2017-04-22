@@ -52,7 +52,7 @@ namespace CharlieQuartet
             gameDeck.Shuffle();
             testHand = new List<Card>();
             testPlayer = new CharlieQuartet.Player(testHand);
-            balance.Content = testPlayer.balance;
+            balance.Content = "$" + testPlayer.balance;
 
             for (int i = 0; i < 2; i++)
             {
@@ -60,6 +60,7 @@ namespace CharlieQuartet
             }
 
             displayHand(testPlayer.hand);
+            cardpoints.Content = testPlayer.CalculateHandValue();
             startbutton.IsEnabled = false;
             betbutton.IsEnabled = true;
             stopbutton.IsEnabled = true;
@@ -71,26 +72,35 @@ namespace CharlieQuartet
             MainWindow mainForm = new MainWindow();
             betWindow betPopUp = new betWindow(testPlayer, mainForm);
             betPopUp.ShowDialog();
-            MessageBox.Show(testPlayer.bet.ToString());
-            balance.Content = testPlayer.balance;
-            betamount.Content = testPlayer.bet;
-        }
-        
-        /*public double getBet()
-        {
+            balance.Content = "$" + testPlayer.balance;
+            betamount.Content = "$" + testPlayer.bet;
+            betbutton.IsEnabled = false;
+            hitbutton.IsEnabled = true;
+            stopbutton.IsEnabled = true;
             
-        }*/
+        }
+
+        private void hitbutton_Click(object sender, RoutedEventArgs e)
+        {
+            /*for (int i = 0; i < 2; i++)
+            {
+                testPlayer.addCardToHand(gameDeck.DealCard());
+            }*/
+        }
 
         private void stopbutton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            int vPoints = testPlayer.CalculateHandValue();
+            testPlayer.makePayment(vPoints);
         }
+
 
         /*public int getAceByNumber(int pNumber)
         {
             // If the index value is 0 and/or the card number = Ace, that obviously means you've drawn an Ace card. When that happens, a popup will appear that will ask the player to decide the value for the card, the choice is either 1 or 11.
             return 
         }*/
-        
+
     }
 }

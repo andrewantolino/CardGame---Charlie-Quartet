@@ -34,40 +34,29 @@ namespace CharlieQuartet
         {
             //calculate the bet amount 
             bet = pBet;
-            //balance = balance - bet;
+            balance -= bet;
             return bet;
-
-            //seting how much player can place bet  
-            /* if (pBet > balance)
-                Console.WriteLine("It seems you're a little short on funds for that, try something more affordable."); */
 
         }
         //if bet == balance - 1 thn return error " not enough money"
         //else bet is placed
         
         public void addCardToHand(Card pCard)
-        { 
-             // place card to hand 
+        {
             hand.Add(pCard);
-
-          
         }
 
 
 
          public int CalculateHandValue()
         {
-
-
             // if ace is 1 or 11
-
-
             // calculating all the points
+
             int points = 0;
 
             for (int i = 0; i < hand.Count; i++)
             {
-                points += hand[i].getPoint();
                 if (hand[i].getNumber() == "Ace")
                 {
                     Console.WriteLine("what do you want Ace to be");
@@ -75,21 +64,18 @@ namespace CharlieQuartet
                     // popup saying if you want ace to be 1 or 11 
 
                     // add either 1 or 11 to points
-
-                  
+ 
                 }
                 else
                 {
                     points += hand[i].getPoint();
-
                 }
            
             }
             return points;
         } 
 
-       
-        public void makePayment(Card pPoint)
+        public void makePayment(int pPoint)
         {
          
             // calculate point value of hand
@@ -98,7 +84,7 @@ namespace CharlieQuartet
 
             double multiplyer;
 
-            switch( total)
+            switch (total)
             {
                 case 21:
                     multiplyer = 1;

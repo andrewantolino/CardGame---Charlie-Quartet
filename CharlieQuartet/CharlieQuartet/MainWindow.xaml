@@ -27,7 +27,7 @@
         <Label x:Name="cardpoints" Content="CARD POINTS" HorizontalAlignment="Left" Margin="112,65,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button x:Name="startbutton" Content="START" HorizontalAlignment="Left" Margin="22,205,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="startbutton_Click"/>
         <Button x:Name="betbutton" Content="BET" HorizontalAlignment="Left" Margin="22,139,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="betbutton_Click"/>
-        <Button x:Name="hitbutton" Content="HIT" HorizontalAlignment="Left" Margin="122,139,0,0" VerticalAlignment="Top" Width="75" Height="39" Grid.ColumnSpan="2"/>
+        <Button x:Name="hitbutton" Content="HIT" HorizontalAlignment="Left" Margin="122,139,0,0" VerticalAlignment="Top" Width="75" Height="39" Grid.ColumnSpan="2" Click="hitbutton_Click"/>
         <Button x:Name="stopbutton" Content="STOP" HorizontalAlignment="Left" Margin="122,205,0,0" VerticalAlignment="Top" Width="75" Height="39" Click="stopbutton_Click" Grid.ColumnSpan="2"/>
         <ListBox x:Name="cardList" HorizontalAlignment="Left" Height="169" Margin="22,262,0,0" VerticalAlignment="Top" Width="195" Grid.ColumnSpan="2"/>
 
