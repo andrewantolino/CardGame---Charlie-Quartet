@@ -22,7 +22,7 @@ namespace CharlieQuartet
     {
         Player testPlayer;
         List<Card> testHand;
-
+        Card POINT;
 
         public MainWindow()
         {
@@ -90,8 +90,16 @@ namespace CharlieQuartet
 
         private void stopbutton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            //Deck newDeck = new Deck();
+            Player payment = new Player(testHand);
+            //MainWindow mainform = new MainWindow();
+            //POINT.getPoint();
             int vPoints = testPlayer.CalculateHandValue();
+            payment.makePayment(vPoints);
+            testPlayer.makePayment(vPoints);
+
+            MessageBox.Show("you have earned", payment.ToString());
+            this.Close();
             testPlayer.makePayment(vPoints);
         }
 
