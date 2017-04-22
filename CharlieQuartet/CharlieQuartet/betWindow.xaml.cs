@@ -45,13 +45,15 @@ namespace CharlieQuartet
             {
                 MessageBox.Show("Please enter a whole number");
             }
-            else if (Double.TryParse(betWindowTextBox.Text, out vBet))
+            else if (Convert.ToDouble(betWindowTextBox.Text) > thisPlayer.balance)
             {
-                double vConvBet = Convert.ToDouble(betWindowTextBox.Text);
+                MessageBox.Show("Your balance isn't high enough to place this bet");
+            }
+            else if (Double.TryParse(betWindowTextBox.Text, out vBet) && !(Convert.ToDouble(betWindowTextBox.Text) > thisPlayer.balance))
+            {
+                double vConvBet = Math.Round(Convert.ToDouble(betWindowTextBox.Text), 2);
+
                 thisPlayer.placeBet(vConvBet);
-                //thisPlayer.balance -= thisPlayer.bet;
-                //editForm.balance.Content = thisPlayer.balance;
-                //editForm.betamount.Content = thisPlayer.bet;
                 
                 this.Close();
 
