@@ -75,7 +75,7 @@ namespace CharlieQuartet
             return points;
         } 
 
-        public void makePayment(int pPoint)
+        public double makePayment(int pPoint)
         {
          
             // calculate point value of hand
@@ -120,7 +120,8 @@ namespace CharlieQuartet
             // make payment
             double  payout =  multiplyer * bet;
             balance += payout;
-            bet = 0; 
+            bet = 0;
+            return payout;
             // optional - reset game
 
         }

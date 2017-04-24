@@ -90,17 +90,9 @@ namespace CharlieQuartet
 
         private void stopbutton_Click(object sender, RoutedEventArgs e)
         {
-            //Deck newDeck = new Deck();
-            Player payment = new Player(testHand);
-            //MainWindow mainform = new MainWindow();
-            //POINT.getPoint();
             int vPoints = testPlayer.CalculateHandValue();
-            payment.makePayment(vPoints);
-            testPlayer.makePayment(vPoints);
+            MessageBox.Show("you have earned " + testPlayer.makePayment(vPoints));
 
-            MessageBox.Show("you have earned", payment.ToString());
-            this.Close();
-            testPlayer.makePayment(vPoints);
         }
 
 
