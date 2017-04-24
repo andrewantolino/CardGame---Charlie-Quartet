@@ -39,7 +39,7 @@ namespace CharlieQuartet
         {
             // return base.ToString();
             return number + " of " + _suit;
-        }
+       }
 
     }
 }

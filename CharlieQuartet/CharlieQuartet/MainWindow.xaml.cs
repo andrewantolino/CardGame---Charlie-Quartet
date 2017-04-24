@@ -21,12 +21,14 @@ namespace CharlieQuartet
     public partial class MainWindow : Window
     {
         Player testPlayer;
-        List<Card> testHand;
+        List<Card> testHand = new List<Card>();
         Card POINT;
+        Deck gameDeck = new Deck();
 
         public MainWindow()
         {
             InitializeComponent();
+            testPlayer = new Player(testHand);
             betbutton.IsEnabled = false;
             hitbutton.IsEnabled = false;
             stopbutton.IsEnabled = false;
@@ -36,7 +38,7 @@ namespace CharlieQuartet
         {
             for (int i = 0; i < pHand.Count; i++)
             {
-                cardList.Items.Add(pHand[i]);
+                cardList.Items.Add(pHand[i].ToString());
             }
 
         }
@@ -48,12 +50,14 @@ namespace CharlieQuartet
 
         private void startbutton_Click(object sender, RoutedEventArgs e)
         {
-            Deck gameDeck = new Deck();
+          
             gameDeck.Shuffle();
-            testHand = new List<Card>();
-            testPlayer = new CharlieQuartet.Player(testHand);
+            betamount.Content = "";
             balance.Content = "$" + testPlayer.balance;
-
+            clearHandDisplay();
+            Deck testDeck = new Deck();
+            List<Card> testHand = new List<Card>();
+           
             for (int i = 0; i < 2; i++)
             {
                 testPlayer.addCardToHand(gameDeck.DealCard());
@@ -64,7 +68,7 @@ namespace CharlieQuartet
             startbutton.IsEnabled = false;
             betbutton.IsEnabled = true;
             stopbutton.IsEnabled = true;
-
+            
         }
 
         private void betbutton_Click(object sender, RoutedEventArgs e)
@@ -82,17 +86,34 @@ namespace CharlieQuartet
 
         private void hitbutton_Click(object sender, RoutedEventArgs e)
         {
-            /*for (int i = 0; i < 2; i++)
+            //each time click on hit button randam card is thrown
+            testPlayer.addCardToHand(gameDeck.DealCard());
+            //POINT.getSuit();
+            clearHandDisplay();
+            displayHand(testHand);
+            cardpoints.Content = testPlayer.CalculateHandValue();
+           
+            if(Convert.ToInt32(cardpoints.Content)>= 30)
             {
-                testPlayer.addCardToHand(gameDeck.DealCard());
-            }*/
+                MessageBox.Show("you have lost");
+                betbutton.IsEnabled = false;
+                hitbutton.IsEnabled = false;
+                stopbutton.IsEnabled = false;
+                startbutton.IsEnabled = true;
+            }
+
+
+
+
+
         }
 
         private void stopbutton_Click(object sender, RoutedEventArgs e)
         {
             int vPoints = testPlayer.CalculateHandValue();
             MessageBox.Show("you have earned " + testPlayer.makePayment(vPoints));
-
+            
+            this.Close();
         }
 
 
