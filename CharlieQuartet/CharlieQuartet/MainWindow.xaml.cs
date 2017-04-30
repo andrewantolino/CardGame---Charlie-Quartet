@@ -137,6 +137,8 @@ namespace CharlieQuartet
             hitbutton.IsEnabled = false;
             stopbutton.IsEnabled = false;
             betbutton.IsEnabled = false;
+            betamount.Content = "";
+            balance.Content = "$" + testPlayer.balance;
             //this.Close();
         }
 
