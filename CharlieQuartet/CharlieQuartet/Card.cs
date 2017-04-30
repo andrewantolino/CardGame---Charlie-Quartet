@@ -10,7 +10,7 @@ namespace CharlieQuartet
     {
         private string number;
         private string _suit;
-        private int point;
+        public int point;
 
         public Card(String pNumber, string pSuit, int pPoint)
         {

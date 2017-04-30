@@ -57,14 +57,9 @@ namespace CharlieQuartet
 
             for (int i = 0; i < hand.Count; i++)
             {
-                if (hand[i].getNumber() == "Ace")
+                if (hand[i].getPoint() == 1)
                 {
-                    Console.WriteLine("what do you want Ace to be");
-
-                    // popup saying if you want ace to be 1 or 11 
-
-                    // add either 1 or 11 to points
- 
+                    points += hand[i].getPoint();
                 }
                 else
                 {

@@ -19,7 +19,7 @@ namespace CharlieQuartet
 
 
                     Dictionary<string, int> myPoints = new Dictionary<string, int>();
-                    myPoints.Add("Ace", 0);
+                    myPoints.Add("Ace", 1);
                     myPoints.Add("Two", 2);
                     myPoints.Add("Three", 3);
                     myPoints.Add("Four", 4);

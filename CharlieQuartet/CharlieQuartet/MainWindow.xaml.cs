@@ -23,12 +23,13 @@ namespace CharlieQuartet
         Player testPlayer;
         List<Card> testHand = new List<Card>();
         Card POINT;
-        Deck gameDeck = new Deck();
+        Deck testDeck;
+
 
         public MainWindow()
         {
             InitializeComponent();
-            testPlayer = new Player(testHand);
+            testPlayer = new Player(testHand); 
             betbutton.IsEnabled = false;
             hitbutton.IsEnabled = false;
             stopbutton.IsEnabled = false;
@@ -48,19 +49,34 @@ namespace CharlieQuartet
             cardList.Items.Clear();
         }
 
+        private void clearCardPoints()
+        {
+            cardpoints.Content = "";
+        }
+
         private void startbutton_Click(object sender, RoutedEventArgs e)
         {
-          
-            gameDeck.Shuffle();
+            testDeck = new Deck();
+            testDeck.Shuffle();
             betamount.Content = "";
             balance.Content = "$" + testPlayer.balance;
             clearHandDisplay();
-            Deck testDeck = new Deck();
-            List<Card> testHand = new List<Card>();
+            clearCardPoints();
+            testPlayer.hand = new List<Card>();
+            testHand = testPlayer.hand;
            
             for (int i = 0; i < 2; i++)
             {
-                testPlayer.addCardToHand(gameDeck.DealCard());
+                testPlayer.addCardToHand(testDeck.DealCard());
+
+                if (testPlayer.hand[i].point == 1)
+                {
+                        MainWindow mainForm = new MainWindow();
+                        aceWindow acePopUp = new aceWindow(testPlayer, mainForm);
+                        acePopUp.ShowDialog();
+                        //cardpoints.Content = testPlayer.hand[i].point;
+                }
+
             }
 
             displayHand(testPlayer.hand);
@@ -87,10 +103,19 @@ namespace CharlieQuartet
         private void hitbutton_Click(object sender, RoutedEventArgs e)
         {
             //each time click on hit button randam card is thrown
-            testPlayer.addCardToHand(gameDeck.DealCard());
+            testPlayer.addCardToHand(testDeck.DealCard());
             //POINT.getSuit();
             clearHandDisplay();
-            displayHand(testHand);
+            displayHand(testPlayer.hand);
+
+            if (testPlayer.hand[testPlayer.hand.Count - 1].point == 1)
+            {
+                MainWindow mainForm = new MainWindow();
+                aceWindow acePopUp = new aceWindow(testPlayer, mainForm);
+                acePopUp.ShowDialog();
+                //cardpoints.Content = testPlayer.hand[i].point;
+            }
+            
             cardpoints.Content = testPlayer.CalculateHandValue();
            
             if(Convert.ToInt32(cardpoints.Content)>= 30)
@@ -100,20 +125,19 @@ namespace CharlieQuartet
                 hitbutton.IsEnabled = false;
                 stopbutton.IsEnabled = false;
                 startbutton.IsEnabled = true;
+                cardpoints.Content = 0;
             }
-
-
-
-
-
         }
 
         private void stopbutton_Click(object sender, RoutedEventArgs e)
         {
             int vPoints = testPlayer.CalculateHandValue();
-            MessageBox.Show("you have earned " + testPlayer.makePayment(vPoints));
-            
-            this.Close();
+            MessageBox.Show("You have earned $" + testPlayer.makePayment(vPoints));
+            startbutton.IsEnabled = true;
+            hitbutton.IsEnabled = false;
+            stopbutton.IsEnabled = false;
+            betbutton.IsEnabled = false;
+            //this.Close();
         }
 
 
